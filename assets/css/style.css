@@ -1,14 +1,18 @@
+@font-face {
+  font-family: 'Game of Thrones';
+  src: url('Game of Thrones.ttf')  format('truetype'); /* Safari, Android, iOS */
+
+  font-family: 'Trajan Pro';
+  src: url('trajanpro-regular-webfont.ttf')  format('truetype');
+}
+
 body {
   /* Positioning */
   margin-top: 50px;
   margin-bottom: 150px;
 
-
-  /* Typography */
-  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
-
   /* Visual */
-  background-image: url("../images/space_background.gif");
+  
 }
 
 html {
@@ -17,4 +21,96 @@ html {
 
   /* Box-model */
   min-height: 100%;
+}
+
+.all {
+  background-image: url("../images/sigils.jpg");
+}
+
+.container {
+  font-family: "Trajan Pro", sans-serif;
+}
+
+.jumbotron {
+  margin-top: 50px;
+  background-color: #9C0000;
+  background: contain;
+}
+
+.submitter {
+  margin-bottom: 150px;
+}
+
+.main-title {
+  font-family: "Game of Thrones", sans-serif;
+  font-size: 128px;
+  text-shadow:
+    -1px -1px 0 #EFAD00,
+    1px -1px 0 #EFAD00,
+    -1px 1px 0 #EFAD00,
+    1px 1px 0 #EFAD00;
+}
+
+.panel-body{
+  background-color: #EFAD00;
+}
+
+.panel-heading {
+  background-color: #EFAD00;
+}
+
+.question {
+  font-weight: bold;
+}
+
+.answers {
+  font-weight: bold;
+}
+
+#main-title-1 {
+  margin-bottom: 40px;
+}
+
+#time-remaining {
+  font-family: "Game of Thrones", sans-serif;
+  font-size: 20px;
+  text-align: center;
+  color: #9C0000; 
+}
+
+#timer {
+  font-family: "Trajan Pro", sans-serif;
+  font-size: 150px;
+  text-align: center;
+  margin-bottom: -40px;
+  text-shadow:
+    -1px -1px 0 #9C0000,
+    1px -1px 0 #9C0000,
+    -1px 1px 0 #9C0000,
+    1px 1px 0 #9C0000;
+}
+
+#font1 {
+  font-family: "Game of Thrones", sans-serif;
+  font-size: 28px;
+  text-align: center;
+  color: #EFAD00;
+}
+
+#font2{
+  font-family: "Trajan Pro", sans-serif;
+  font-size: 32px;
+  text-align: center;
+  font-weight: bold;
+  color: #EFAD00; 
+}
+
+#submitButton {
+  font-family: "Game of Thrones", sans-serif;
+  width: 210px;
+  height: 75px;
+  font-size: 40px;
+  padding-top: 8px;
+  background-color: #9C0000;
+  color: #EFAD00;
 }

@@ -1,24 +1,469 @@
 <!DOCTYPE html>
+
 <html lang="en-us">
 
-<head>
-  <meta charset="UTF-8">
-  <title>Trivia Game</title>
-  <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <link rel="stylesheet" type="text/css" href="assets/css/style.css">
-</head>
+  <head>
 
-<body>
+    <meta charset="UTF-8">
+    <title>GAME OF THRONES TRIVIA</title>
 
-  <div class="container">
-    
+    <!-- Bootstrap CDN -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+
+  </head>
+
+  <body>
+  <div class="all">
+
+    <!-- Bootstrap Container will hold everything. -->
+    <div class="container">
+
+      <!-- Jumbotron holds the title section. -->
+      <div class="jumbotron">
+        <div class="container">
+          <div class="row vertical-center">
+            <div class="col-lg-8">
+              <h1 class="main-title" id="main-title-1">#</h1>
+              <hi class="main-title" id="main-title-2">TRIVIA</hi>
+            </div>
+            <br>
+            <!-- The countdown timer is here -->
+            <div class="col-lg-4">
+              <div class="panel panel-default">
+                <div class="panel-heading">
+                  <h3 class="panel-title" id="time-remaining"><strong>Time Remaining</strong></h3>
+                </div>
+                <div class="panel-body">
+                  <h3 id="timer"></h3>
+                </div>
+              </div>
+              <!--show score upon submit-->
+              <div>
+                <h2 class="quizScore" id="userScore"><span id="font1"></span><span id="font2"></span></h2>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Panels are being used to hold various sections. -->
+      <!-- Question 1 -->
+      <div class="row">
+        <div class="col-lg-6">    
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <!-- This h3 section will hold the question being asked -->
+              <h3 class="panel-title question"><strong>1)  Where does Tyrion Lannister meet Shae?</strong></h3>
+            </div>
+
+            <div class="panel-body answers">
+
+              <!-- This ul section will hold the answer bank for the question -->
+              <ul>
+                <input class="answer" type="radio" name="q1" value="0">
+                  <label>Casterly Rock</label>
+                <br>
+                <input class="answer" type="radio" name="q1" value="1">
+                  <label id="correctString1">The Lannister camp</label>
+                <br>
+                <input class="answer" type="radio" name="q1" value="0">
+                  <label>King's Landing</label>
+                <br>
+                <input class="answer" type="radio" name="q1" value="0">
+                  <label>A brothel in the North</label>
+                <br><br>
+                <!--show only wrong answers on submit-->
+                <div class="quizAnswers" id="correctAnswer1"></div>
+              </ul>
+
+            </div>
+
+          </div>
+        </div>
+        <!-- Question 2 -->
+        <div class="col-lg-6">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <!-- This h3 section will hold the question being asked -->
+              <h3 class="panel-title question"><strong>2)  Who cuts off Jaime Lannister's hand?</strong></h3>
+            </div>
+
+            <div class="panel-body answers">
+
+              <!-- This ul section will hold the answer bank for the question -->
+              <ul>
+                <input class="answer" type="radio" name="q2" value="1">
+                  <label id="correctString2">Locke</label>
+                <br>
+                <input class="answer" type="radio" name="q2" value="0">
+                  <label>Gregor Clegane</label>
+                <br>
+                <input class="answer" type="radio" name="q2" value="0">
+                  <label>Rickard Karstark</label>
+                <br>
+                <input class="answer" type="radio" name="q2" value="0">
+                  <label>Brienne</label>
+                <br><br>
+                <!--show only wrong answers on submit-->
+                <div class="quizAnswers" id="correctAnswer2"></div>
+              </ul>
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+      <!-- Question 3 -->
+      <div class="row">
+        <div class="col-lg-6">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <!-- This h3 section will hold the question being asked -->
+              <h3 class="panel-title question"><strong>3)  Who's face did Arya Stark wear at a banquet as she poisoned this person's entire family?</strong></h3>
+            </div>
+
+            <div class="panel-body answers">
+
+              <!-- This ul section will hold the answer bank for the question -->
+              <ul>
+                <input class="answer" type="radio" name="q3" value="0">
+                  <label>Roose Bolton</label>
+                <br>
+                <input class="answer" type="radio" name="q3" value="0">
+                  <label>Edmure Tully</label>
+                <br>
+                <input class="answer" type="radio" name="q3" value="1">
+                  <label id="correctString3">Walder Frey</label>
+                <br>
+                <input class="answer" type="radio" name="q3" value="0">
+                  <label>Balon Greyjoy</label>
+                <br><br>
+                <!--show only wrong answers on submit-->
+                <div class="quizAnswers" id="correctAnswer3"></div>
+              </ul>
+
+            </div>
+
+          </div>
+        </div>
+          <!-- Question 4 -->
+        <div class="col-lg-6">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <!-- This h3 section will hold the question being asked -->
+              <h3 class="panel-title question"><strong>4)  Who has not been Hand of the King?</strong></h3>
+            </div>
+
+            <div class="panel-body answers">
+
+              <!-- This ul section will hold the answer bank for the question -->
+              <ul>
+                <input class="answer" type="radio" name="q4" value="0">
+                  <label>Tyrion Lannister</label>
+                <br>
+                <input class="answer" type="radio" name="q4" value="0">
+                  <label>Ned Stark</label>
+                <br>
+                <input class="answer" type="radio" name="q4" value="1">
+                  <label id="correctString4">Petyr Baelish</label>
+                <br>
+                <input class="answer" type="radio" name="q4" value="0">
+                  <label>Kevan Lannister</label>
+                <br><br>
+                <!--show only wrong answers on submit-->
+                <div class="quizAnswers" id="correctAnswer4"></div>
+              </ul>
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+          <!-- Question 5 -->
+      <div class="row">
+        <div class="col-lg-6">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <!-- This h3 section will hold the question being asked -->
+              <h3 class="panel-title question"><strong>5)  Who gives Daenerys Targaryen her dragon eggs?</strong></h3>
+            </div>
+
+            <div class="panel-body answers">
+
+              <!-- This ul section will hold the answer bank for the question -->
+              <ul>
+                <input class="answer" type="radio" name="q5" value="1">
+                  <label id="correctString5">Illyrio Mopatis</label>
+                <br>
+                <input class="answer" type="radio" name="q5" value="0">
+                  <label>Jorah Mormont</label>
+                <br>
+                <input class="answer" type="radio" name="q5" value="0">
+                  <label>Viserys Targaryen</label>
+                <br>
+                <input class="answer" type="radio" name="q5" value="0">
+                  <label>Khal Drogo</label>
+                <br><br>
+                <!--show only wrong answers on submit-->
+                <div class="quizAnswers" id="correctAnswer5"></div>
+              </ul>
+
+            </div>
+
+          </div>
+        </div>
+          <!-- Question 6 -->
+        <div class="col-lg-6">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <!-- This h3 section will hold the question being asked -->
+              <h3 class="panel-title question"><strong>6)  Where is the Iron Bank?</strong></h3>
+            </div>
+
+            <div class="panel-body answers">
+
+              <!-- This ul section will hold the answer bank for the question -->
+              <ul>
+                <input class="answer" type="radio" name="q6" value="0">
+                  <label>Lannisport</label>
+                <br>
+                <input class="answer" type="radio" name="q6" value="0">
+                  <label>King's Landing</label>
+                <br>
+                <input class="answer" type="radio" name="q6" value="0">
+                  <label>Oldtown</label>
+                <br>
+                <input class="answer" type="radio" name="q6" value="1">
+                  <label id="correctString6">Braavos</label>
+                <br><br>
+                <!--show only wrong answers on submit-->
+                <div class="quizAnswers" id="correctAnswer6"></div>
+              </ul>
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+          <!-- Question 7 -->
+      <div class="row">
+        <div class="col-lg-6">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <!-- This h3 section will hold the question being asked -->
+              <h3 class="panel-title question"><strong>7)  Who has NOT competed in a trial by combat?</strong></h3>
+            </div>
+
+            <div class="panel-body answers">
+
+              <!-- This ul section will hold the answer bank for the question -->
+              <ul>
+                <input class="answer" type="radio" name="q7" value="0">
+                  <label>Beric Dondarrion</label>
+                <br>
+                <input class="answer" type="radio" name="q7" value="0">
+                  <label>Sandor Clegane</label>
+                <br>
+                <input class="answer" type="radio" name="q7" value="0">
+                  <label>Bronn</label>
+                <br>
+                <input class="answer" type="radio" name="q7" value="1">
+                  <label id="correctString7">Jaime Lannister</label>
+                <br><br>
+                <!--show only wrong answers on submit-->
+                <div class="quizAnswers" id="correctAnswer7"></div>
+              </ul>
+
+            </div>
+
+          </div>
+        </div>
+          <!-- Question 8 -->
+        <div class="col-lg-6">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <!-- This h3 section will hold the question being asked -->
+              <h3 class="panel-title question"><strong>8)  What signaled Khal Drogo's undefeated glory to the Dothraki?</strong></h3>
+            </div>
+
+            <div class="panel-body answers">
+
+              <!-- This ul section will hold the answer bank for the question -->
+              <ul>
+                <input class="answer" type="radio" name="q8" value="0">
+                  <label>The size of his Khalasar</label>
+                <br>
+                <input class="answer" type="radio" name="q8" value="1">
+                  <label id="correctString8">The length of his hair</label>
+                <br>
+                <input class="answer" type="radio" name="q8" value="0">
+                  <label>The paint on his chest</label>
+                <br>
+                <input class="answer" type="radio" name="q8" value="0">
+                  <label>The number of his horses</label>
+                <br><br>
+                <!--show only wrong answers on submit-->
+                <div class="quizAnswers" id="correctAnswer8"></div>
+              </ul>
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+          <!-- Question 9 -->
+      <div class="row">
+        <div class="col-lg-6">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <!-- This h3 section will hold the question being asked -->
+              <h3 class="panel-title question"><strong>9)  Daenerys Targaryen is called "Mhysa" by the freed people of Yunkai. What does that name mean?</strong></h3>
+            </div>
+
+            <div class="panel-body answers">
+
+              <!-- This ul section will hold the answer bank for the question -->
+              <ul>
+                <input class="answer" type="radio" name="q9" value="0">
+                  <label>Deliverer</label>
+                <br>
+                <input class="answer" type="radio" name="q9" value="1">
+                  <label id="correctString9">Mother</label>
+                <br>
+                <input class="answer" type="radio" name="q9" value="0">
+                  <label>Usurper</label>
+                <br>
+                <input class="answer" type="radio" name="q9" value="0">
+                  <label>Protector</label>
+                <br><br>
+                <!--show only wrong answers on submit-->
+                <div class="quizAnswers" id="correctAnswer9"></div>
+              </ul>
+
+            </div>
+
+          </div>
+        </div>
+        <!-- Question 10 -->
+        <div class="col-lg-6">  
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <!-- This h3 section will hold the question being asked -->
+              <h3 class="panel-title question"><strong>10)  What father legitimizes his bastard son?</strong></h3>
+            </div>
+
+            <div class="panel-body answers">
+
+              <!-- This ul section will hold the answer bank for the question -->
+              <ul>
+                <input class="answer" type="radio" name="q10" value="0">
+                  <label>Ned Stark</label>
+                <br>
+                <input class="answer" type="radio" name="q10" value="0">
+                  <label>Robert Baratheon</label>
+                <br>
+                <input class="answer" type="radio" name="q10" value="1">
+                  <label id="correctString10">Roose Bolton</label>
+                <br>
+                <input class="answer" type="radio" name="q10" value="0">
+                  <label>Tywin Lannister</label>
+                <br><br>
+                <!--show only wrong answers on submit-->
+                <div class="quizAnswers" id="correctAnswer10"></div>
+              </ul>
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+          <!-- Question 11 -->
+      <div class="row">
+        <div class="col-lg-6">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <!-- This h3 section will hold the question being asked -->
+              <h3 class="panel-title question"><strong>11)  What is NOT part of the Night's Watch vows?</strong></h3>
+            </div>
+
+            <div class="panel-body answers">
+
+              <!-- This ul section will hold the answer bank for the question -->
+              <ul>
+                <input class="answer" type="radio" name="q11" value="0">
+                  <label>Win No Glory</label>
+                <br>
+                <input class="answer" type="radio" name="q11" value="0">
+                  <label>Take No Wife</label>
+                <br>
+                <input class="answer" type="radio" name="q11" value="0">
+                  <label>Father No Children</label>
+                <br>
+                <input class="answer" type="radio" name="q11" value="1">
+                  <label id="correctString11">Kill No Innocent</label>
+                <br><br>
+                <!--show only wrong answers on submit-->
+                <div class="quizAnswers" id="correctAnswer11"></div>
+              </ul>
+
+            </div>
+
+          </div>
+        </div>
+          <!-- Question 12 -->
+        <div class="col-lg-6">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <!-- This h3 section will hold the question being asked -->
+              <h3 class="panel-title question"><strong>12)  Euron Greyjoy promises Cersei '1000 ships' if she will what?</strong></h3>
+            </div>
+
+            <div class="panel-body answers">
+
+              <!-- This ul section will hold the answer bank for the question -->
+              <ul>
+                <input class="answer" type="radio" name="q12" value="0">
+                  <label>Make him King of the Iron Islands</label>
+                <br>
+                <input class="answer" type="radio" name="q12" value="0">
+                  <label>Make him King in the North</label>
+                <br>
+                <input class="answer" type="radio" name="q12" value="1">
+                  <label id="correctString12">Marry him</label>
+                <br>
+                <input class="answer" type="radio" name="q12" value="0">
+                  <label>Send the Lannister army to fight with him</label>
+                <br><br>
+                <!--show only wrong answers on submit-->
+                <div class="quizAnswers" id="correctAnswer12"></div>
+              </ul>
+
+            </div>
+
+          </div>          
+
+        </div>
+
+      </div>
+      
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="submitter">
+            <input class="quizSubmit" id="submitButton" onClick="submitQuiz()" type="submit" value="Submit" />
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 
+    <!-- Adds a link to jQuery and the JavaScript file. Loaded at the bottom so it waits for the HTML content to display first. If you put this at the top it will crash, because the HTML IDs won't exist yet.-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="assets/javascript/app.js"></script>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script type="text/javascript" src="assets/javascript/app.js"></script>
-
-</body>
+  </body>
 
 </html>
+
