@@ -49,7 +49,7 @@
     console.log("submitted");
     // run the stop Function
     stop();
-    window.alert("Click OK and scroll to the top of the page to see your final score below the timer. Also, if you got any questions wrong the correct answer will appear after each missed question.");
+    window.alert("Your final score is located below the timer. If you got any questions wrong the correct answer will appear after each missed question.");
 
   // get each answer score
     function answerScore (qName) {
@@ -142,6 +142,7 @@ $(document).ready(function() {
 
   $("#submitButton").click(function() {
     $(this).addClass("hide");
+    $(window).scrollTop(0);
   });
 
 });
